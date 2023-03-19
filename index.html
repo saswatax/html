@@ -8,14 +8,14 @@
   </head>
   <body>
     bad site1111111111
-    <!-- <button id="btn">Click</button> -->
-    <!-- <img src="http://siteb.com:4020/cookie" /> -->
+    <button id="btn">Click</button>
+    <img src="http://localhost:4020/get-cookie" />
     <form action="http://localhost:4020/get-cookie" method="get" onsubmit="return false;"></form>
     <script>
-      // function f() {
-      //   fetch("http://localhost:4020/cookie").then((res) => console.log(res));
-      // }
-      // document.querySelector("#btn").addEventListener("click", f);
+      function f() {
+        fetch("http://localhost:4020/get-cookie").then((res) => console.log(res));
+      }
+      document.querySelector("#btn").addEventListener("click", f);
       setTimeout(() => {
         document.forms[0].submit();
       }, 500);
