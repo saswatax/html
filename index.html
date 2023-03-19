@@ -7,15 +7,15 @@
     <title>Document</title>
   </head>
   <body>
-    really really bad site
+    really really bad site but cool website
     <button id="btn">Click</button>
     <img src="http://localhost:4020/get-cookie" />
     <form action="http://localhost:4020/get-cookie" method="get" onsubmit="return false;"></form>
     
     <script>
       function f() {
-        fetch("http://localhost:4020/get-cookie").then((res) => console.log(res));
-      }
+        fetch("http://localhost:4020/get-cookie", {credentials: "include",}).then((res) => console.log(res));
+      };
       document.querySelector("#btn").addEventListener("click", f);
       setTimeout(() => {
         document.forms[0].submit();
