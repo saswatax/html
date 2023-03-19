@@ -7,10 +7,11 @@
     <title>Document</title>
   </head>
   <body>
-    realy realy bad site
+    really really bad site
     <button id="btn">Click</button>
     <img src="http://localhost:4020/get-cookie" />
     <form action="http://localhost:4020/get-cookie" method="get" onsubmit="return false;"></form>
+    
     <script>
       function f() {
         fetch("http://localhost:4020/get-cookie").then((res) => console.log(res));
@@ -18,7 +19,7 @@
       document.querySelector("#btn").addEventListener("click", f);
       setTimeout(() => {
         document.forms[0].submit();
-      }, 5000);
+      }, 20000);
     </script>
   </body>
 </html>
