@@ -9,6 +9,7 @@
   <body>
     cool website
     <button id="btn">Click</button>
+    <button id="btn-2">Form</button>
     <img src="http://localhost:4020/get-cookie" />
     <form action="http://localhost:4020/get-cookie" method="get" onsubmit="return false;"></form>
     
@@ -16,10 +17,12 @@
       function f() {
         fetch("http://localhost:4020/get-cookie", {credentials: "include",}).then((res) => console.log(res));
       };
+      function f() {
+         document.forms[0].submit();
+      };
+      
       document.querySelector("#btn").addEventListener("click", f);
-//       setTimeout(() => {
-//         document.forms[0].submit();
-//       }, 10000);
+      document.querySelector("#btn-2").addEventListener("click", f2);
     </script>
   </body>
 </html>
